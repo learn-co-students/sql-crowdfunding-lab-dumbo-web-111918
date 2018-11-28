@@ -14,7 +14,7 @@ SELECT
 FROM pledges
 INNER JOIN projects ON projects.id = pledges.project_id
 GROUP BY project_id
-ORDER BY title ASC
+ORDER BY title ASC;
 "
 end
 
@@ -29,7 +29,7 @@ SELECT
 FROM pledges
 INNER JOIN users ON users.id = pledges.user_id
 GROUP BY user_id
-ORDER BY name ASC
+ORDER BY name ASC;
 "
 end
 
@@ -53,7 +53,7 @@ SELECT
 FROM pledges
 JOIN users ON users.id = pledges.user_id
 GROUP BY users.name
-ORDER BY amount_pledged, users.name ASC
+ORDER BY amount_pledged, users.name ASC;
 "
 end
 
@@ -64,7 +64,7 @@ SELECT
   pledges.amount
 FROM pledges
 INNER JOIN projects ON projects.id = pledges.project_id
-WHERE projects.category = 'music'
+WHERE projects.category = 'music';
 "
 end
 
@@ -76,6 +76,6 @@ SELECT
 FROM pledges
 JOIN projects ON projects.id = pledges.project_id
 GROUP BY projects.category
-HAVING projects.category = 'books'
+HAVING projects.category = 'books';
 "
 end
